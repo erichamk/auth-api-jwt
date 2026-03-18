@@ -1,3 +1,21 @@
 spring:
   application:
     name: authapi
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  error:
+    include-stacktrace: ALWAYS
+
+jwt:
+  secret: 12345678913456789123456789123456789
+  expiration: 86400000
